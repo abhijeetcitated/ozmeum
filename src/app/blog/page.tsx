@@ -13,7 +13,7 @@ export default function Blog() {
             <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4" /> Return to Base
           </Link>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-zinc-700 dark:text-zinc-100 drop-shadow-sm transition-colors duration-300">
-            Archival Records
+            Blog Archives
           </h1>
           <p className="text-sm sm:text-base md:text-lg font-medium text-zinc-500 dark:text-zinc-400 transition-colors duration-300 max-w-2xl">
             Access the latest telemetry reports, theoretical breakthroughs, and node configuration updates across the cluster network.

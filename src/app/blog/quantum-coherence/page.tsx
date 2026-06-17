@@ -34,12 +34,12 @@ export default function BlogPost() {
         </h1>
         
         <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-[10px] sm:text-xs md:text-sm font-bold text-zinc-500 uppercase tracking-widest mt-1 sm:mt-2">
-          <div className="flex items-center gap-2">
+          <Link href="https://www.linkedin.com/in/abhijeet-pratap-singh-teeli-net/" target="_blank" className="flex items-center gap-2 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
             <div className="w-6 h-6 rounded-full overflow-hidden border border-zinc-300 dark:border-zinc-700">
-              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&auto=format&fit=crop" alt="Author" className="w-full h-full object-cover" />
+              <img src="/abhijeetparatapsingh.webp" alt="Abhijeet Pratap Singh" className="w-full h-full object-cover" />
             </div>
-            <span>Dr. Elena Rostova</span>
-          </div>
+            <span>Abhijeet Pratap Singh</span>
+          </Link>
           <span className="flex items-center gap-2"><Calendar className="w-4 h-4" /> OCT 24, 2026</span>
           <span className="flex items-center gap-2"><Clock className="w-4 h-4" /> 12 MIN READ</span>
           <span className="flex items-center gap-2"><Activity className="w-4 h-4 text-cyan-600 dark:text-cyan-400" /> LOG 7382</span>
@@ -202,16 +202,19 @@ export default function BlogPost() {
           
           {/* Author Card */}
           <div className="p-6 sm:p-8 rounded-3xl sm:rounded-[32px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] flex flex-col items-center text-center gap-3 sm:gap-4">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)] border-2 border-white/20 dark:border-zinc-700">
-              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&auto=format&fit=crop" alt="Dr. Elena Rostova" className="w-full h-full object-cover" />
-            </div>
-            <div>
-              <h3 className="text-base sm:text-lg font-bold text-zinc-800 dark:text-zinc-100">Dr. Elena Rostova</h3>
+            <Link href="https://www.linkedin.com/in/abhijeet-pratap-singh-teeli-net/" target="_blank" className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)] border-2 border-white/20 dark:border-zinc-700 hover:scale-105 transition-transform duration-300">
+              <img src="/abhijeetparatapsingh.webp" alt="Abhijeet Pratap Singh" className="w-full h-full object-cover" />
+            </Link>
+            <div className="flex flex-col items-center">
+              <h3 className="text-base sm:text-lg font-bold text-zinc-800 dark:text-zinc-100">Abhijeet Pratap Singh</h3>
               <p className="text-[10px] sm:text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest mt-1">Lead Systems Architect</p>
             </div>
             <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1 sm:mt-2">
               Overseeing the transition from legacy processing cores to the new distributed quantum pipeline.
             </p>
+            <Link href="https://www.linkedin.com/in/abhijeet-pratap-singh-teeli-net/" target="_blank" className="mt-2 px-5 py-2.5 w-full rounded-full flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest transition-all duration-200 bg-gradient-to-b from-white to-[#dcdfe4]/50 border-t border-white/60 shadow-[2px_2px_5px_#bebebe,_-2px_-2px_5px_#ffffff] active:shadow-[inset_2px_2px_4px_#bebebe,_inset_-2px_-2px_4px_#ffffff] dark:bg-zinc-50 dark:bg-none dark:hover:bg-zinc-800 dark:border-none dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] dark:active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)] text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-400">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg> Connect
+            </Link>
           </div>
 
           {/* Table of Contents Card */}

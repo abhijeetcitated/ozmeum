@@ -21,7 +21,7 @@ function Gauge({ label, value, min, max, unit, colorClass, icon: Icon }: GaugePr
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   return (
-    <div className="group/stat flex flex-col items-center justify-center p-5 rounded-[24px] dark:rounded-[16px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/85 dark:hover:border-zinc-700 dark:shadow-[0_8px_16px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.08)] dark:hover:shadow-[0_12px_24px_rgba(0,0,0,0.9),inset_0_1px_0_rgba(255,255,255,0.2)] transition-all duration-300 gap-3">
+    <div className="group/stat flex flex-col items-center justify-center p-5 rounded-[24px] dark:rounded-[16px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/85 dark:hover:border-zinc-700 dark:shadow-[0_8px_16px_rgba(0,0,0,0.8)] dark:hover:shadow-[0_12px_24px_rgba(0,0,0,0.9)] transition-all duration-300 gap-3">
       {/* The Gauge Knob */}
       <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-[#ebebeb] to-[#c8c8c8] border border-white/60 shadow-[4px_4px_8px_#c0c0c0,_-2px_-2px_4px_#ffffff] dark:bg-[#030303] dark:bg-none dark:border dark:border-zinc-900 dark:shadow-[inset_0_4px_16px_rgba(0,0,0,0.95)] flex items-center justify-center transition-all duration-300">
         <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none drop-shadow-sm">
@@ -168,7 +168,7 @@ export default function Dashboard() {
 
       <section className="w-full relative">
         {/* Extruded / Raised Card */}
-        <div className="group relative rounded-3xl dark:rounded-[24px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/85 dark:hover:border-zinc-700 dark:shadow-[0_8px_16px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.08)] dark:hover:shadow-[0_12px_24px_rgba(0,0,0,0.9),inset_0_1px_0_rgba(255,255,255,0.2)] p-3 sm:p-4 md:p-6 transition-all duration-300">
+        <div className="group relative rounded-3xl dark:rounded-[24px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/85 dark:hover:border-zinc-700 dark:shadow-[0_8px_16px_rgba(0,0,0,0.8)] dark:hover:shadow-[0_12px_24px_rgba(0,0,0,0.9)] p-3 sm:p-4 md:p-6 transition-all duration-300">
           
           {/* Inner Sunken Panel */}
           <div className="rounded-2xl dark:rounded-[24px] bg-[#e0e0e0] shadow-[inset_8px_8px_16px_rgba(163,177,198,0.55),_inset_-8px_-8px_16px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_4px_16px_rgba(0,0,0,0.95)] p-4 sm:p-8 md:p-12 overflow-hidden relative flex flex-col items-center justify-start min-h-[350px] sm:min-h-[400px] transition-all duration-300">
@@ -178,8 +178,8 @@ export default function Dashboard() {
 
             <div className="relative z-10 flex flex-col items-center text-center max-w-5xl w-full gap-6 sm:gap-8">
               
-              {/* 1. Live Satellite Dispatch Node */}
-              <div className="w-full flex items-center px-1 md:px-2 py-1.5 md:py-2 rounded-full bg-[#e0e0e0] shadow-[inset_4px_4px_8px_rgba(163,177,198,0.55),_inset_-4px_-4px_8px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_2px_8px_rgba(0,0,0,0.95)] overflow-hidden transition-all duration-300">
+              {/* 1. Live Satellite Dispatch Node - Clickable Ticker */}
+              <Link href="/blog" className="w-full flex items-center px-1 md:px-2 py-1.5 md:py-2 rounded-full bg-[#e0e0e0] shadow-[inset_4px_4px_8px_rgba(163,177,198,0.55),_inset_-4px_-4px_8px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_2px_8px_rgba(0,0,0,0.95)] overflow-hidden transition-all duration-300 cursor-pointer hover:shadow-[inset_6px_6px_10px_rgba(163,177,198,0.6),_inset_-6px_-6px_10px_#ffffff] dark:hover:border-cyan-500/20">
                 <div className="flex items-center gap-2 md:gap-3 px-3 md:px-4 border-r border-zinc-300 dark:border-zinc-800 shrink-0 z-10 bg-[#e0e0e0] dark:bg-[#030303]">
                   <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)] animate-pulse" />
                   <span className="text-[8px] sm:text-[9px] md:text-[10px] font-bold text-zinc-600 dark:text-zinc-400 uppercase tracking-widest whitespace-nowrap">Live Satellite Dispatch Feed</span>
@@ -189,13 +189,13 @@ export default function Dashboard() {
                     LOG 7382: ORBITAL NODE ALPHA SYNC COMPLETE /// LOG 7383: INCOMING TRANSMISSION FROM SECTOR 4 /// LOG 7384: QUANTUM UPLINK STABLE AT 99.8% /// LOG 7385: DETECTING MINOR FLUCTUATION IN CORE TEMP /// LOG 7386: OVERRIDE PROTOCOL STANDBY ///
                   </div>
                 </div>
-              </div>
+              </Link>
 
               {/* Status & Warning Beacon */}
               <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
                 <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#e0e0e0] shadow-[inset_4px_4px_8px_rgba(163,177,198,0.55),_inset_-4px_-4px_8px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_4px_16px_rgba(0,0,0,0.95)] transition-all duration-300">
-                  <div className="w-4 h-4 rounded-full bg-[#e0e0e0] dark:bg-black shadow-[inset_2px_2px_5px_rgba(163,177,198,0.55),inset_-2px_-2px_5px_#ffffff] dark:shadow-none flex items-center justify-center">
-                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.8)] dark:bg-cyan-400 dark:shadow-[0_0_10px_rgba(6,182,212,0.8)] animate-pulse" />
+                  <div className="relative flex items-center justify-center w-5 h-5 rounded-full bg-black/10 dark:bg-black/50 shadow-inner">
+                    <div className="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.8)] animate-pulse" />
                   </div>
                   <span className="text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-[0.2em] transition-colors duration-300">System Online</span>
                 </div>
@@ -242,7 +242,7 @@ export default function Dashboard() {
                   { label: "Integrity", value: "Verified", icon: Database },
                   { label: "Threat", value: "Nominal", icon: ShieldAlert },
                 ].map((stat, i) => (
-                  <div key={i} className="group/stat flex flex-col items-center justify-center p-5 rounded-[24px] dark:rounded-[16px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/85 dark:hover:border-zinc-700 dark:shadow-[0_8px_16px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.08)] dark:hover:shadow-[0_12px_24px_rgba(0,0,0,0.9),inset_0_1px_0_rgba(255,255,255,0.2)] gap-3 transition-all duration-300">
+                  <div key={i} className="group/stat flex flex-col items-center justify-center p-5 rounded-[24px] dark:rounded-[16px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/85 dark:hover:border-zinc-700 dark:shadow-[0_8px_16px_rgba(0,0,0,0.8)] dark:hover:shadow-[0_12px_24px_rgba(0,0,0,0.9)] gap-3 transition-all duration-300">
                     
                     {/* Physical Dials in Light Mode / Sunken in Dark Mode */}
                     <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-[#ebebeb] to-[#c8c8c8] border border-white/60 shadow-[4px_4px_8px_#c0c0c0,_-2px_-2px_4px_#ffffff] dark:bg-[#030303] dark:bg-none dark:border dark:border-zinc-900 dark:shadow-[inset_0_4px_16px_rgba(0,0,0,0.95)] flex items-center justify-center transition-all duration-300">
@@ -271,11 +271,11 @@ export default function Dashboard() {
                   className="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-widest transition-all duration-200 flex items-center justify-center gap-2 bg-gradient-to-b from-white to-[#dcdfe4]/50 border-t border-white/60 shadow-[2px_2px_5px_#bebebe,_-2px_-2px_5px_#ffffff] active:shadow-[inset_2px_2px_4px_#bebebe,_inset_-2px_-2px_4px_#ffffff] dark:bg-zinc-50 dark:bg-none dark:hover:bg-zinc-200 dark:border-none dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] dark:active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)] text-cyan-600 dark:text-zinc-900 hover:text-cyan-600 dark:hover:text-zinc-700">
                   <Zap className="w-4 h-4" /> Initialize Core
                 </button>
-                <button 
-                  onClick={() => addLog("ACCESSING SECURE LOGS ARCHIVE...")}
-                  className="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-widest transition-all duration-200 flex items-center justify-center gap-2 bg-gradient-to-b from-white to-[#dcdfe4]/50 border-t border-white/60 shadow-[2px_2px_5px_#bebebe,_-2px_-2px_5px_#ffffff] active:shadow-[inset_2px_2px_4px_#bebebe,_inset_-2px_-2px_4px_#ffffff] dark:bg-zinc-50 dark:bg-none dark:hover:bg-zinc-200 dark:border-none dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] dark:active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)] text-zinc-600 dark:text-zinc-900 hover:text-cyan-600 dark:hover:text-zinc-700">
-                  <Terminal className="w-4 h-4" /> Access Logs
-                </button>
+                <Link href="/blog" className="w-full sm:w-auto">
+                  <button className="w-full px-6 sm:px-8 py-3.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-widest transition-all duration-200 flex items-center justify-center gap-2 bg-gradient-to-b from-white to-[#dcdfe4]/50 border-t border-white/60 shadow-[2px_2px_5px_#bebebe,_-2px_-2px_5px_#ffffff] active:shadow-[inset_2px_2px_4px_#bebebe,_inset_-2px_-2px_4px_#ffffff] dark:bg-zinc-50 dark:bg-none dark:hover:bg-zinc-200 dark:border-none dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] dark:active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)] text-zinc-600 dark:text-zinc-900 hover:text-cyan-600 dark:hover:text-zinc-700">
+                    <Terminal className="w-4 h-4" /> Secure Archives
+                  </button>
+                </Link>
               </div>
 
               {/* 4. Interactive CLI Terminal Console Box & Toggles */}
@@ -337,9 +337,9 @@ export default function Dashboard() {
                       <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest text-center leading-tight max-w-[60px]">{sw.label}</span>
                       <button 
                         onClick={() => handleToggle(sw.key as 'uplink' | 'neural' | 'console', sw.label)}
-                        className={`w-8 h-14 rounded-full p-1 transition-all duration-300 shadow-[inset_4px_4px_8px_rgba(163,177,198,0.55),_inset_-4px_-4px_8px_#ffffff] dark:shadow-[inset_0_4px_8px_rgba(0,0,0,0.8)] border border-transparent ${toggles[sw.key as keyof typeof toggles] ? 'bg-cyan-500/10 dark:bg-cyan-500/5 dark:border-cyan-500/20' : 'bg-[#e0e0e0] dark:bg-[#030303]'}`}
+                        className={`w-8 h-14 rounded-full p-1 transition-all duration-300 shadow-[inset_4px_4px_8px_#bebebe,_inset_-4px_-4px_8px_#ffffff] dark:shadow-[inset_0_2px_8px_rgba(0,0,0,0.8)] border border-transparent ${toggles[sw.key as keyof typeof toggles] ? 'bg-cyan-500/10 dark:bg-cyan-500/5 dark:border-cyan-500/20' : 'bg-[#e0e0e0] dark:bg-[#030303]'}`}
                       >
-                        <div className={`w-6 h-6 rounded-full bg-gradient-to-br from-[#ebebeb] to-[#c8c8c8] dark:from-zinc-700 dark:to-zinc-900 shadow-[2px_2px_4px_#bebebe,_-2px_-2px_4px_#ffffff] dark:shadow-[0_2px_4px_rgba(0,0,0,0.8)] transition-all duration-300 flex items-center justify-center ${toggles[sw.key as keyof typeof toggles] ? 'translate-y-6' : 'translate-y-0'}`}>
+                        <div className={`w-6 h-6 rounded-full bg-gradient-to-br from-[#ebebeb] to-[#c8c8c8] dark:from-zinc-800 dark:to-zinc-900 shadow-[2px_2px_5px_#bebebe,_-2px_-2px_5px_#ffffff] dark:shadow-[0_2px_5px_rgba(0,0,0,0.9)] transition-all duration-300 flex items-center justify-center ${toggles[sw.key as keyof typeof toggles] ? 'translate-y-6' : 'translate-y-0'}`}>
                           <div className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${toggles[sw.key as keyof typeof toggles] ? 'bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.8)]' : 'bg-zinc-400 dark:bg-zinc-600'}`} />
                         </div>
                       </button>
