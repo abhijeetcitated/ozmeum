@@ -72,34 +72,34 @@ export default function BlogPost() {
               Performance Metrics (Cycle 83 vs 84)
             </h3>
             
-            <div className="w-full overflow-hidden rounded-[24px] bg-[#e0e0e0] shadow-[inset_6px_6px_12px_rgba(163,177,198,0.55),_inset_-6px_-6px_12px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_4px_16px_rgba(0,0,0,0.95)] mb-10">
+            <div className="w-full overflow-hidden rounded-[24px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] mb-10 p-2 md:p-4">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-zinc-300 dark:border-zinc-800">
+                  <tr className="border-b-2 border-zinc-300 dark:border-zinc-700">
                     <th className="py-4 px-6 text-xs font-bold text-zinc-500 uppercase tracking-widest">Metric</th>
-                    <th className="py-4 px-6 text-xs font-bold text-zinc-500 uppercase tracking-widest">Cycle 83</th>
-                    <th className="py-4 px-6 text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest">Cycle 84 (New)</th>
-                    <th className="py-4 px-6 text-xs font-bold text-zinc-500 uppercase tracking-widest">Delta</th>
+                    <th className="py-4 px-6 text-xs font-bold text-zinc-500 uppercase tracking-widest border-l border-zinc-300 dark:border-zinc-800">Cycle 83</th>
+                    <th className="py-4 px-6 text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest border-l border-zinc-300 dark:border-zinc-800">Cycle 84 (New)</th>
+                    <th className="py-4 px-6 text-xs font-bold text-zinc-500 uppercase tracking-widest border-l border-zinc-300 dark:border-zinc-800">Delta</th>
                   </tr>
                 </thead>
                 <tbody className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
-                  <tr className="border-b border-zinc-300 dark:border-zinc-800/50">
+                  <tr className="border-b border-zinc-300/50 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-colors">
                     <td className="py-4 px-6">Peak Coherence</td>
-                    <td className="py-4 px-6">94.2%</td>
-                    <td className="py-4 px-6 font-bold text-zinc-900 dark:text-white">99.84%</td>
-                    <td className="py-4 px-6 text-green-600 dark:text-green-400">+5.64%</td>
+                    <td className="py-4 px-6 border-l border-zinc-300/50 dark:border-zinc-800/50">94.2%</td>
+                    <td className="py-4 px-6 font-bold text-zinc-900 dark:text-white border-l border-zinc-300/50 dark:border-zinc-800/50">99.84%</td>
+                    <td className="py-4 px-6 text-green-600 dark:text-green-400 border-l border-zinc-300/50 dark:border-zinc-800/50">+5.64%</td>
                   </tr>
-                  <tr className="border-b border-zinc-300 dark:border-zinc-800/50">
+                  <tr className="border-b border-zinc-300/50 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-colors">
                     <td className="py-4 px-6">Packet Loss (S4)</td>
-                    <td className="py-4 px-6">2.1%</td>
-                    <td className="py-4 px-6 font-bold text-zinc-900 dark:text-white">0.01%</td>
-                    <td className="py-4 px-6 text-green-600 dark:text-green-400">-2.09%</td>
+                    <td className="py-4 px-6 border-l border-zinc-300/50 dark:border-zinc-800/50">2.1%</td>
+                    <td className="py-4 px-6 font-bold text-zinc-900 dark:text-white border-l border-zinc-300/50 dark:border-zinc-800/50">0.01%</td>
+                    <td className="py-4 px-6 text-green-600 dark:text-green-400 border-l border-zinc-300/50 dark:border-zinc-800/50">-2.09%</td>
                   </tr>
-                  <tr>
+                  <tr className="hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-colors">
                     <td className="py-4 px-6">Core Temp Avg</td>
-                    <td className="py-4 px-6">48°C</td>
-                    <td className="py-4 px-6 font-bold text-zinc-900 dark:text-white">38°C</td>
-                    <td className="py-4 px-6 text-green-600 dark:text-green-400">-10°C</td>
+                    <td className="py-4 px-6 border-l border-zinc-300/50 dark:border-zinc-800/50">48°C</td>
+                    <td className="py-4 px-6 font-bold text-zinc-900 dark:text-white border-l border-zinc-300/50 dark:border-zinc-800/50">38°C</td>
+                    <td className="py-4 px-6 text-green-600 dark:text-green-400 border-l border-zinc-300/50 dark:border-zinc-800/50">-10°C</td>
                   </tr>
                 </tbody>
               </table>
@@ -174,10 +174,24 @@ export default function BlogPost() {
         </div>
 
         {/* Right Column: Sidebar */}
-        <div className="lg:col-span-4 flex flex-col gap-8">
+        <div className="lg:col-span-4 flex flex-col gap-8 relative">
           
+          {/* Author Card */}
+          <div className="p-6 rounded-[32px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] flex flex-col items-center text-center gap-4">
+            <div className="w-20 h-20 rounded-full overflow-hidden shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)] border-2 border-white/20 dark:border-zinc-700">
+              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&auto=format&fit=crop" alt="Dr. Elena Rostova" className="w-full h-full object-cover" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-100">Dr. Elena Rostova</h3>
+              <p className="text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest mt-1">Lead Systems Architect</p>
+            </div>
+            <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">
+              Overseeing the transition from legacy processing cores to the new distributed quantum pipeline.
+            </p>
+          </div>
+
           {/* Table of Contents Card */}
-          <div className="p-6 rounded-[32px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] sticky top-8">
+          <div className="p-6 rounded-[32px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] sticky top-[30vh]">
             <h3 className="text-sm font-bold text-zinc-800 dark:text-zinc-200 uppercase tracking-widest mb-6 flex items-center gap-2">
               <Bookmark className="w-4 h-4 text-cyan-600" />
               Table of Contents
@@ -196,20 +210,6 @@ export default function BlogPost() {
                 <ChevronRight className="w-3 h-3" /> FAQs
               </li>
             </ul>
-          </div>
-
-          {/* Author Card */}
-          <div className="p-6 rounded-[32px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] flex flex-col items-center text-center gap-4">
-            <div className="w-20 h-20 rounded-full overflow-hidden shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)] border-2 border-white/20 dark:border-zinc-700">
-              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&auto=format&fit=crop" alt="Dr. Elena Rostova" className="w-full h-full object-cover" />
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-100">Dr. Elena Rostova</h3>
-              <p className="text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest mt-1">Lead Systems Architect</p>
-            </div>
-            <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">
-              Overseeing the transition from legacy processing cores to the new distributed quantum pipeline.
-            </p>
           </div>
 
         </div>
