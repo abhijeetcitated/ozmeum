@@ -44,8 +44,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NEW: Specs & Node Grid Section */}
+      <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full mt-4">
+        
+        {/* Technical Specifications Sheet */}
+        <div className="lg:col-span-7 group relative rounded-3xl dark:rounded-[24px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/85 dark:shadow-[0_8px_16px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.08)] p-6 md:p-8 transition-all duration-300">
+          <h2 className="text-xl sm:text-2xl font-bold text-zinc-700 dark:text-zinc-100 mb-6 uppercase tracking-widest flex items-center gap-3">
+            <Zap className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />
+            Hardware Specifications
+          </h2>
+          <div className="flex flex-col gap-4">
+            {[
+              { label: "Core Architecture", value: "Quantum V2.4" },
+              { label: "Sub-Space Protocol", value: "Q-Relay Ext. 9" },
+              { label: "Base Latency", value: "0.014 ms" },
+              { label: "Max Throughput", value: "1024 Tbps" }
+            ].map((spec, idx) => (
+              <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-[16px] bg-[#e0e0e0] shadow-[inset_6px_6px_12px_rgba(163,177,198,0.55),_inset_-6px_-6px_12px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_4px_16px_rgba(0,0,0,0.95)] gap-2">
+                <span className="text-xs font-bold text-zinc-500 uppercase tracking-widest">{spec.label}</span>
+                <span className="text-sm font-mono font-bold text-cyan-600 dark:text-cyan-400">{spec.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Global Node Relay Grid */}
+        <div className="lg:col-span-5 group relative rounded-3xl dark:rounded-[24px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/85 dark:shadow-[0_8px_16px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.08)] p-6 md:p-8 overflow-hidden flex flex-col transition-all duration-300">
+          <h2 className="text-sm font-bold text-zinc-700 dark:text-zinc-100 mb-6 uppercase tracking-widest relative z-10 flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
+            Global Node Relay
+          </h2>
+          
+          <div className="absolute inset-0 opacity-40 dark:opacity-100 bg-[linear-gradient(to_right,#bebebe_1px,transparent_1px),linear-gradient(to_bottom,#bebebe_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_60%,transparent_100%)] pointer-events-none transition-all duration-300" />
+          
+          <div className="relative w-full flex-1 min-h-[200px] z-10">
+             <svg className="absolute inset-0 w-full h-full text-cyan-500/40 dark:text-cyan-500/30">
+               <line x1="20%" y1="30%" x2="50%" y2="70%" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" className="animate-[pulse_3s_ease-in-out_infinite]" />
+               <line x1="50%" y1="70%" x2="85%" y2="40%" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" className="animate-[pulse_2s_ease-in-out_infinite]" />
+               <line x1="20%" y1="30%" x2="85%" y2="40%" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" className="animate-[pulse_4s_ease-in-out_infinite]" />
+             </svg>
+             <div className="absolute left-[20%] top-[30%] w-3 h-3 rounded-full bg-[#e0e0e0] dark:bg-cyan-500 shadow-[2px_2px_4px_#bebebe,_-2px_-2px_4px_#ffffff] dark:shadow-[0_0_12px_rgba(6,182,212,0.8)] -translate-x-1.5 -translate-y-1.5 border border-white/50 dark:border-none" />
+             <div className="absolute left-[50%] top-[70%] w-4 h-4 rounded-full bg-cyan-500 dark:bg-cyan-400 shadow-[0_0_10px_rgba(6,182,212,0.6)] dark:shadow-[0_0_15px_rgba(6,182,212,1)] -translate-x-2 -translate-y-2 animate-pulse border-2 border-white/80 dark:border-none" />
+             <div className="absolute left-[85%] top-[40%] w-3 h-3 rounded-full bg-[#e0e0e0] dark:bg-cyan-500 shadow-[2px_2px_4px_#bebebe,_-2px_-2px_4px_#ffffff] dark:shadow-[0_0_12px_rgba(6,182,212,0.8)] -translate-x-1.5 -translate-y-1.5 border border-white/50 dark:border-none" />
+          </div>
+        </div>
+      </section>
+
       {/* 3 Dynamic Showoff Grid Cards */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pb-12">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-4 pb-12">
         {[
           {
             title: "Hardware Telemetry",
