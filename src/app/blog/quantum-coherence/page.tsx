@@ -160,14 +160,38 @@ export default function BlogPost() {
             </h3>
             
             <div className="flex flex-col gap-4">
-              <div className="p-6 rounded-[20px] bg-[#e0e0e0] shadow-[inset_2px_2px_5px_rgba(163,177,198,0.55),_inset_-2px_-2px_5px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_2px_8px_rgba(0,0,0,0.95)]">
-                <h4 className="text-lg font-bold text-zinc-800 dark:text-zinc-200 mb-2">What happens to the legacy cores?</h4>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 m-0">They will be safely decommissioned and their physical components recycled for the tertiary sensor grid expansion planned for Q4.</p>
-              </div>
-              <div className="p-6 rounded-[20px] bg-[#e0e0e0] shadow-[inset_2px_2px_5px_rgba(163,177,198,0.55),_inset_-2px_-2px_5px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_2px_8px_rgba(0,0,0,0.95)]">
-                <h4 className="text-lg font-bold text-zinc-800 dark:text-zinc-200 mb-2">Will the Neumorphic UI be rolled out to all sectors?</h4>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 m-0">Yes. Following the 14% efficiency gain in Sector 4, the UI update is scheduled for network-wide deployment by Cycle 86.</p>
-              </div>
+              {[
+                {
+                  q: "What happens to the legacy cores?",
+                  a: "They will be safely decommissioned and their physical components recycled for the tertiary sensor grid expansion planned for Q4."
+                },
+                {
+                  q: "Will the Neumorphic UI be rolled out to all sectors?",
+                  a: "Yes. Following the 14% efficiency gain in Sector 4, the UI update is scheduled for network-wide deployment by Cycle 86."
+                },
+                {
+                  q: "How did you achieve 99.8% coherence?",
+                  a: "We implemented predictive thermodynamic modeling coupled with a heavily optimized 1024-thread secondary node array, effectively eliminating sub-space packet loss."
+                },
+                {
+                  q: "Is there any risk of quantum entanglement failure?",
+                  a: "The risk is mathematically nominal. Our automated tertiary cooling loops spin up instantly to compensate for any detected thermometric anomalies."
+                },
+                {
+                  q: "When is the next system diagnostic scheduled?",
+                  a: "A full network diagnostic is slated for the beginning of Cycle 85, immediately prior to the legacy core phase-out."
+                }
+              ].map((faq, idx) => (
+                <details key={idx} className="group p-6 rounded-[20px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] dark:hover:border-zinc-700 transition-all duration-300">
+                  <summary className="flex items-center justify-between cursor-pointer list-none [&::-webkit-details-marker]:hidden text-lg font-bold text-zinc-800 dark:text-zinc-200">
+                    {faq.q}
+                    <ChevronRight className="w-5 h-5 text-cyan-600 dark:text-cyan-400 group-open:rotate-90 transition-transform duration-300 shrink-0" />
+                  </summary>
+                  <div className="pt-4 mt-4 border-t border-zinc-300/50 dark:border-zinc-800/50 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                    <p className="m-0">{faq.a}</p>
+                  </div>
+                </details>
+              ))}
             </div>
 
           </div>
