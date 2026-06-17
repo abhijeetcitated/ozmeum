@@ -28,33 +28,45 @@ export default function Blog() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         {[
-          { date: "CYCLE 84.12", title: "Quantum Coherence in Sub-Space Relays", excerpt: "Detailed breakdown of the recent stabilization protocols initiated across the secondary node array, achieving 99.8% coherence over a 12-hour sustained burst." },
-          { date: "CYCLE 83.95", title: "Thermometric Anomalies Resolved", excerpt: "Following the minor fluctuations detected in sector 4, automated cooling loops have been re-calibrated. Core temperatures remain steady at optimal thresholds." },
-          { date: "CYCLE 82.10", title: "Architectural Shift to Neumorphic Systems", excerpt: "A retrospective on the integration of highly tactile, skeuomorphic interfaces for mission-critical operations, reducing operator latency by 14%." },
-          { date: "CYCLE 80.05", title: "Node Synchronization Enhancements", excerpt: "Deploying parallel verification methods across distributed hardware led to a significant 18% improvement in baseline synchronization speeds." },
-          { date: "CYCLE 78.44", title: "Dark Matter Fluid Dynamics", excerpt: "Initial observations from the tertiary sensor grid suggest minor gravitational deviations. Simulation models are currently being updated." },
-          { date: "CYCLE 75.12", title: "Legacy Core Retirement", excerpt: "Phasing out the initial prototype cores. All critical workloads have been successfully handed over to the new quantum pipeline architecture." }
+          { slug: "quantum-coherence", date: "CYCLE 84.12", title: "Quantum Coherence in Sub-Space Relays", excerpt: "Detailed breakdown of the recent stabilization protocols initiated across the secondary node array, achieving 99.8% coherence over a 12-hour sustained burst.", image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" },
+          { slug: "thermometric-anomalies", date: "CYCLE 83.95", title: "Thermometric Anomalies Resolved", excerpt: "Following the minor fluctuations detected in sector 4, automated cooling loops have been re-calibrated. Core temperatures remain steady at optimal thresholds.", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" },
+          { slug: "architectural-shift", date: "CYCLE 82.10", title: "Architectural Shift to Neumorphic Systems", excerpt: "A retrospective on the integration of highly tactile, skeuomorphic interfaces for mission-critical operations, reducing operator latency by 14%.", image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop" },
+          { slug: "node-sync", date: "CYCLE 80.05", title: "Node Synchronization Enhancements", excerpt: "Deploying parallel verification methods across distributed hardware led to a significant 18% improvement in baseline synchronization speeds.", image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop" },
+          { slug: "dark-matter", date: "CYCLE 78.44", title: "Dark Matter Fluid Dynamics", excerpt: "Initial observations from the tertiary sensor grid suggest minor gravitational deviations. Simulation models are currently being updated.", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop" },
+          { slug: "legacy-core", date: "CYCLE 75.12", title: "Legacy Core Retirement", excerpt: "Phasing out the initial prototype cores. All critical workloads have been successfully handed over to the new quantum pipeline architecture.", image: "https://images.unsplash.com/photo-1614064075525-45d2e08677c7?q=80&w=800&auto=format&fit=crop" }
         ].map((post, idx) => (
           <article 
             key={idx} 
-            className="flex flex-col bg-[#e0e0e0] shadow-[10px_10px_20px_#bebebe,_-10px_-10px_20px_#ffffff] rounded-[28px] p-6 dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] dark:hover:border-zinc-700 transition-all duration-300"
+            className="flex flex-col bg-[#e0e0e0] shadow-[10px_10px_20px_#bebebe,_-10px_-10px_20px_#ffffff] rounded-[28px] overflow-hidden dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] dark:hover:border-zinc-700 transition-all duration-300 group/article"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#e0e0e0] shadow-[inset_2px_2px_5px_rgba(163,177,198,0.55),_inset_-2px_-2px_5px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_2px_8px_rgba(0,0,0,0.95)] self-start">
-              <div className="w-1.5 h-1.5 rounded-full bg-slate-400 shadow-[0_0_8px_rgba(148,163,184,0.8)] dark:bg-cyan-400 dark:shadow-[0_0_8px_rgba(6,182,212,0.8)] animate-pulse" />
-              <span className="text-[9px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-widest">{post.date}</span>
+            {/* Image Thumbnail */}
+            <Link href={`/blog/${post.slug}`} className="w-full h-48 relative overflow-hidden bg-zinc-200 dark:bg-zinc-800 block">
+              <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover/article:scale-105 transition-transform duration-700 ease-out" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 dark:opacity-100" />
+            </Link>
+            
+            <div className="p-6 flex flex-col flex-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#e0e0e0] shadow-[inset_2px_2px_5px_rgba(163,177,198,0.55),_inset_-2px_-2px_5px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_2px_8px_rgba(0,0,0,0.95)] self-start -mt-10 relative z-10">
+                <div className="w-1.5 h-1.5 rounded-full bg-slate-400 shadow-[0_0_8px_rgba(148,163,184,0.8)] dark:bg-cyan-400 dark:shadow-[0_0_8px_rgba(6,182,212,0.8)] animate-pulse" />
+                <span className="text-[9px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-widest">{post.date}</span>
+              </div>
+              
+              <Link href={`/blog/${post.slug}`}>
+                <h2 className="text-xl font-bold text-zinc-700 dark:text-zinc-100 mt-5 leading-snug group-hover/article:text-cyan-600 dark:group-hover/article:text-cyan-400 transition-colors duration-300">
+                  {post.title}
+                </h2>
+              </Link>
+              
+              <p className="text-sm leading-relaxed text-zinc-500 dark:text-zinc-400 mt-3 flex-1">
+                {post.excerpt}
+              </p>
+              
+              <Link href={`/blog/${post.slug}`} className="self-end mt-8">
+                <button className="px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-200 flex items-center gap-2 bg-gradient-to-b from-white to-[#dcdfe4]/50 border-t border-white/60 shadow-[2px_2px_5px_#bebebe,_-2px_-2px_5px_#ffffff] active:shadow-[inset_2px_2px_4px_#bebebe,_inset_-2px_-2px_4px_#ffffff] dark:bg-zinc-50 dark:bg-none dark:hover:bg-zinc-200 dark:border-none dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] dark:active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)] text-zinc-600 dark:text-zinc-900 hover:text-cyan-600 dark:hover:text-zinc-700">
+                  READ LOG →
+                </button>
+              </Link>
             </div>
-            
-            <h2 className="text-xl font-bold text-zinc-700 dark:text-zinc-100 mt-5 leading-snug">
-              {post.title}
-            </h2>
-            
-            <p className="text-sm leading-relaxed text-zinc-500 dark:text-zinc-400 mt-3 flex-1">
-              {post.excerpt}
-            </p>
-            
-            <button className="self-end mt-8 px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-200 flex items-center gap-2 bg-gradient-to-b from-white to-[#dcdfe4]/50 border-t border-white/60 shadow-[2px_2px_5px_#bebebe,_-2px_-2px_5px_#ffffff] active:shadow-[inset_2px_2px_4px_#bebebe,_inset_-2px_-2px_4px_#ffffff] dark:bg-zinc-50 dark:bg-none dark:hover:bg-zinc-200 dark:border-none dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] dark:active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)] text-zinc-600 dark:text-zinc-900 hover:text-cyan-600 dark:hover:text-zinc-700">
-              READ LOG →
-            </button>
           </article>
         ))}
       </div>
