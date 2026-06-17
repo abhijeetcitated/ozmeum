@@ -5,12 +5,12 @@ import { ArrowLeft, Share2, Bookmark, Clock, Activity, Calendar, User, ChevronRi
 
 export default function BlogPost() {
   return (
-    <div className="flex flex-col gap-8 w-full max-w-6xl mx-auto py-8 md:py-12 relative z-10 px-4 md:px-0">
+    <div className="flex flex-col gap-6 sm:gap-8 w-full max-w-7xl mx-auto py-6 sm:py-8 md:py-12 relative z-10 px-4 sm:px-6 lg:px-8">
       
       {/* Top Nav */}
-      <div className="flex items-center justify-between mb-4">
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-zinc-500 hover:text-cyan-600 transition-colors duration-300">
-          <ArrowLeft className="w-4 h-4" /> Back to Archives
+      <div className="flex items-center justify-between mb-2 sm:mb-4">
+        <Link href="/blog" className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-500 hover:text-cyan-600 transition-colors duration-300">
+          <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4" /> Back to Archives
         </Link>
         <div className="flex items-center gap-4">
           <button className="w-10 h-10 rounded-full bg-[#e0e0e0] shadow-[4px_4px_8px_#bebebe,_-4px_-4px_8px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_2px_8px_rgba(0,0,0,0.95)] flex items-center justify-center text-zinc-500 hover:text-cyan-600 transition-all duration-300 active:shadow-[inset_2px_2px_4px_#bebebe,_inset_-2px_-2px_4px_#ffffff] dark:active:shadow-[inset_0_4px_8px_rgba(0,0,0,0.6)]">
@@ -23,17 +23,17 @@ export default function BlogPost() {
       </div>
 
       {/* Standalone Hero Header */}
-      <header className="flex flex-col gap-6">
-        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#e0e0e0] shadow-[inset_4px_4px_8px_rgba(163,177,198,0.55),_inset_-4px_-4px_8px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_4px_16px_rgba(0,0,0,0.95)] self-start">
-          <div className="w-2.5 h-2.5 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.8)] dark:bg-cyan-400 dark:shadow-[0_0_10px_rgba(6,182,212,0.8)] animate-pulse" />
-          <span className="text-[10px] font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest">CYCLE 84.12 • VERIFIED LOG</span>
+      <header className="flex flex-col gap-4 sm:gap-6">
+        <div className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#e0e0e0] shadow-[inset_4px_4px_8px_rgba(163,177,198,0.55),_inset_-4px_-4px_8px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_4px_16px_rgba(0,0,0,0.95)] self-start">
+          <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(34,197,94,0.8)] dark:bg-cyan-400 dark:shadow-[0_0_10px_rgba(6,182,212,0.8)] animate-pulse" />
+          <span className="text-[8px] sm:text-[10px] font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest">CYCLE 84.12 • VERIFIED LOG</span>
         </div>
         
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-zinc-800 dark:text-zinc-100 leading-[1.1]">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-zinc-800 dark:text-zinc-100 leading-[1.1]">
           Quantum Coherence in Sub-Space Relays
         </h1>
         
-        <div className="flex flex-wrap items-center gap-6 text-xs md:text-sm font-bold text-zinc-500 uppercase tracking-widest mt-2">
+        <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-[10px] sm:text-xs md:text-sm font-bold text-zinc-500 uppercase tracking-widest mt-1 sm:mt-2">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-full overflow-hidden border border-zinc-300 dark:border-zinc-700">
               <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&auto=format&fit=crop" alt="Author" className="w-full h-full object-cover" />
@@ -47,19 +47,19 @@ export default function BlogPost() {
       </header>
 
       {/* Standalone Hero Image */}
-      <div className="w-full h-[40vh] md:h-[60vh] rounded-[32px] overflow-hidden mt-4 bg-zinc-200 dark:bg-zinc-900 shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] dark:border dark:border-zinc-800/80 relative">
+      <div className="w-full h-[30vh] sm:h-[40vh] md:h-[60vh] rounded-3xl sm:rounded-[32px] overflow-hidden mt-2 sm:mt-4 bg-zinc-200 dark:bg-zinc-900 shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] dark:border dark:border-zinc-800/80 relative">
         <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop" alt="Quantum Coherence" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 
       {/* Main Layout Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mt-6 sm:mt-8">
         
         {/* Left Column: Main Content */}
-        <div className="lg:col-span-8 flex flex-col gap-10">
+        <div className="lg:col-span-8 flex flex-col gap-8 sm:gap-10">
           
-          <div className="prose prose-zinc dark:prose-invert prose-lg max-w-none text-zinc-600 dark:text-zinc-400">
-            <p className="lead text-xl md:text-2xl text-zinc-700 dark:text-zinc-300 font-medium mb-8 leading-relaxed">
+          <div className="prose prose-sm sm:prose-base md:prose-lg prose-zinc dark:prose-invert max-w-none text-zinc-600 dark:text-zinc-400">
+            <p className="lead text-lg sm:text-xl md:text-2xl text-zinc-700 dark:text-zinc-300 font-medium mb-6 sm:mb-8 leading-relaxed">
               Detailed breakdown of the recent stabilization protocols initiated across the secondary node array, achieving 99.8% coherence over a 12-hour sustained burst.
             </p>
             
@@ -68,12 +68,12 @@ export default function BlogPost() {
             </p>
 
             {/* Tactical Data Table */}
-            <h3 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100 mt-12 mb-6 tracking-tight">
+            <h3 className="text-xl sm:text-2xl font-bold text-zinc-800 dark:text-zinc-100 mt-10 sm:mt-12 mb-4 sm:mb-6 tracking-tight">
               Performance Metrics (Cycle 83 vs 84)
             </h3>
             
-            <div className="w-full overflow-hidden rounded-[24px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] mb-10 p-2 md:p-4">
-              <table className="w-full text-left border-collapse">
+            <div className="w-full overflow-x-auto rounded-[24px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] mb-8 sm:mb-10 p-2 sm:p-4">
+              <table className="w-full text-left border-collapse min-w-[400px]">
                 <thead>
                   <tr className="border-b-2 border-zinc-300 dark:border-zinc-700">
                     <th className="py-4 px-6 text-xs font-bold text-zinc-500 uppercase tracking-widest">Metric</th>
@@ -105,7 +105,7 @@ export default function BlogPost() {
               </table>
             </div>
 
-            <h3 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100 mt-12 mb-4 tracking-tight">
+            <h3 className="text-xl sm:text-2xl font-bold text-zinc-800 dark:text-zinc-100 mt-10 sm:mt-12 mb-3 sm:mb-4 tracking-tight">
               Architectural Enhancements
             </h3>
             
@@ -113,7 +113,7 @@ export default function BlogPost() {
               By leveraging a heavily skeuomorphic neural engine interface, operators were able to visually track entanglement shifts in real-time. The tactile feedback loop integrated into the physical dials on the dashboard reduced reaction times by an estimated 14%. When the node synchronization algorithms detected a minor slip, the automated system immediately spun up tertiary cooling loops.
             </p>
 
-            <ul className="flex flex-col gap-4 mt-8 mb-10 list-none pl-0">
+            <ul className="flex flex-col gap-3 sm:gap-4 mt-6 sm:mt-8 mb-8 sm:mb-10 list-none pl-0">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-6 h-6 text-cyan-500 shrink-0 mt-0.5" />
                 <span><strong className="text-zinc-800 dark:text-zinc-200">Secondary Node Array:</strong> Fully optimized and running at 1024 concurrent threads across the distributed grid.</span>
@@ -129,22 +129,22 @@ export default function BlogPost() {
             </ul>
 
             {/* Embedded Skeuomorphic Stat Callout */}
-            <div className="my-12 p-8 rounded-[32px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] relative overflow-hidden">
+            <div className="my-8 sm:my-12 p-6 sm:p-8 rounded-3xl sm:rounded-[32px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-              <div className="flex flex-col md:flex-row items-center justify-around gap-8 text-center md:text-left">
-                <div className="flex flex-col gap-2">
-                  <span className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Sustained Duration</span>
-                  <span className="text-4xl md:text-5xl font-mono font-bold text-zinc-800 dark:text-zinc-100">12h 4m</span>
+              <div className="flex flex-col md:flex-row items-center justify-around gap-6 sm:gap-8 text-center md:text-left">
+                <div className="flex flex-col gap-1 sm:gap-2">
+                  <span className="text-[10px] sm:text-xs font-bold text-zinc-500 uppercase tracking-widest">Sustained Duration</span>
+                  <span className="text-3xl sm:text-4xl md:text-5xl font-mono font-bold text-zinc-800 dark:text-zinc-100">12h 4m</span>
                 </div>
                 <div className="h-px w-full md:h-16 md:w-px bg-zinc-300 dark:bg-zinc-800" />
-                <div className="flex flex-col gap-2">
-                  <span className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Latency Drop</span>
-                  <span className="text-4xl md:text-5xl font-mono font-bold text-cyan-600 dark:text-cyan-400">14.2%</span>
+                <div className="flex flex-col gap-1 sm:gap-2">
+                  <span className="text-[10px] sm:text-xs font-bold text-zinc-500 uppercase tracking-widest">Latency Drop</span>
+                  <span className="text-3xl sm:text-4xl md:text-5xl font-mono font-bold text-cyan-600 dark:text-cyan-400">14.2%</span>
                 </div>
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100 mt-12 mb-4 tracking-tight">
+            <h3 className="text-xl sm:text-2xl font-bold text-zinc-800 dark:text-zinc-100 mt-10 sm:mt-12 mb-3 sm:mb-4 tracking-tight">
               Future Projections
             </h3>
             
@@ -152,10 +152,10 @@ export default function BlogPost() {
               As we approach Cycle 85, the engineering team is preparing to phase out the last of the legacy cores. The absolute parity observed across the distributed cognitive nodes suggests that dark matter fluid dynamic models can now be executed natively within the relay itself, removing the need for external processing clusters.
             </p>
 
-            <hr className="my-12 border-zinc-300 dark:border-zinc-800" />
+            <hr className="my-8 sm:my-12 border-zinc-300 dark:border-zinc-800" />
 
             {/* FAQ Section */}
-            <h3 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100 mb-8 tracking-tight">
+            <h3 className="text-xl sm:text-2xl font-bold text-zinc-800 dark:text-zinc-100 mb-6 sm:mb-8 tracking-tight">
               Frequently Asked Questions
             </h3>
             
@@ -182,12 +182,12 @@ export default function BlogPost() {
                   a: "A full network diagnostic is slated for the beginning of Cycle 85, immediately prior to the legacy core phase-out."
                 }
               ].map((faq, idx) => (
-                <details key={idx} className="group p-6 rounded-[20px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] dark:hover:border-zinc-700 transition-all duration-300">
-                  <summary className="flex items-center justify-between cursor-pointer list-none [&::-webkit-details-marker]:hidden text-lg font-bold text-zinc-800 dark:text-zinc-200">
-                    {faq.q}
-                    <ChevronRight className="w-5 h-5 text-cyan-600 dark:text-cyan-400 group-open:rotate-90 transition-transform duration-300 shrink-0" />
+                <details key={idx} className="group p-5 sm:p-6 rounded-2xl sm:rounded-[20px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] dark:hover:border-zinc-700 transition-all duration-300">
+                  <summary className="flex items-center justify-between cursor-pointer list-none [&::-webkit-details-marker]:hidden text-base sm:text-lg font-bold text-zinc-800 dark:text-zinc-200 gap-4">
+                    <span>{faq.q}</span>
+                    <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-600 dark:text-cyan-400 group-open:rotate-90 transition-transform duration-300 shrink-0" />
                   </summary>
-                  <div className="pt-4 mt-4 border-t border-zinc-300/50 dark:border-zinc-800/50 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  <div className="pt-3 sm:pt-4 mt-3 sm:mt-4 border-t border-zinc-300/50 dark:border-zinc-800/50 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
                     <p className="m-0">{faq.a}</p>
                   </div>
                 </details>
@@ -198,25 +198,25 @@ export default function BlogPost() {
         </div>
 
         {/* Right Column: Sidebar */}
-        <div className="lg:col-span-4 flex flex-col gap-8 relative">
+        <div className="lg:col-span-4 flex flex-col gap-6 sm:gap-8 relative">
           
           {/* Author Card */}
-          <div className="p-6 rounded-[32px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] flex flex-col items-center text-center gap-4">
-            <div className="w-20 h-20 rounded-full overflow-hidden shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)] border-2 border-white/20 dark:border-zinc-700">
+          <div className="p-6 sm:p-8 rounded-3xl sm:rounded-[32px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] flex flex-col items-center text-center gap-3 sm:gap-4">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)] border-2 border-white/20 dark:border-zinc-700">
               <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&auto=format&fit=crop" alt="Dr. Elena Rostova" className="w-full h-full object-cover" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-100">Dr. Elena Rostova</h3>
-              <p className="text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest mt-1">Lead Systems Architect</p>
+              <h3 className="text-base sm:text-lg font-bold text-zinc-800 dark:text-zinc-100">Dr. Elena Rostova</h3>
+              <p className="text-[10px] sm:text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest mt-1">Lead Systems Architect</p>
             </div>
-            <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">
+            <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1 sm:mt-2">
               Overseeing the transition from legacy processing cores to the new distributed quantum pipeline.
             </p>
           </div>
 
           {/* Table of Contents Card */}
-          <div className="p-6 rounded-[32px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] sticky top-[30vh]">
-            <h3 className="text-sm font-bold text-zinc-800 dark:text-zinc-200 uppercase tracking-widest mb-6 flex items-center gap-2">
+          <div className="p-6 sm:p-8 rounded-3xl sm:rounded-[32px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] sticky top-[30vh]">
+            <h3 className="text-xs sm:text-sm font-bold text-zinc-800 dark:text-zinc-200 uppercase tracking-widest mb-4 sm:mb-6 flex items-center gap-2">
               <Bookmark className="w-4 h-4 text-cyan-600" />
               Table of Contents
             </h3>

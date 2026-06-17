@@ -109,7 +109,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="flex flex-col gap-16 w-full max-w-6xl mx-auto py-4 relative z-10">
+    <div className="flex flex-col gap-8 sm:gap-12 md:gap-16 w-full max-w-7xl mx-auto py-4 sm:py-6 relative z-10 px-4 sm:px-6 lg:px-8">
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes marquee {
           0% { transform: translateX(100%); }
@@ -140,35 +140,35 @@ export default function Dashboard() {
       `}} />
 
       {/* Return to home link */}
-      <div className="w-full flex justify-between px-2">
-        <Link href="/" className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest hover:text-cyan-600 transition-colors duration-300 flex items-center gap-2">
+      <div className="w-full flex flex-col sm:flex-row justify-between px-2 gap-4">
+        <Link href="/" className="text-[10px] sm:text-xs font-bold text-zinc-500 uppercase tracking-widest hover:text-cyan-600 transition-colors duration-300 flex items-center gap-2">
           ← Return
         </Link>
-        <Link href="/blog" className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest hover:text-cyan-600 transition-colors duration-300 flex items-center gap-2">
+        <Link href="/blog" className="text-[10px] sm:text-xs font-bold text-zinc-500 uppercase tracking-widest hover:text-cyan-600 transition-colors duration-300 flex items-center gap-2">
           Access Archives →
         </Link>
       </div>
 
       <section className="w-full relative">
         {/* Extruded / Raised Card */}
-        <div className="group relative rounded-3xl dark:rounded-[24px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/85 dark:shadow-[0_8px_16px_rgba(0,0,0,0.9),inset_0_1px_0_rgba(255,255,255,0.08)] dark:hover:border-zinc-700 dark:hover:shadow-[0_12px_24px_rgba(0,0,0,0.9),inset_0_1px_0_rgba(255,255,255,0.2)] p-4 md:p-6 transition-all duration-300">
+        <div className="group relative rounded-3xl dark:rounded-[24px] bg-[#e0e0e0] shadow-[12px_12px_24px_rgba(163,177,198,0.55),_-12px_-12px_24px_#ffffff] dark:bg-gradient-to-b dark:from-zinc-950 dark:to-zinc-900 dark:border dark:border-zinc-800/85 dark:hover:border-zinc-700 dark:shadow-[0_8px_16px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.08)] dark:hover:shadow-[0_12px_24px_rgba(0,0,0,0.9),inset_0_1px_0_rgba(255,255,255,0.2)] p-3 sm:p-4 md:p-6 transition-all duration-300">
           
           {/* Inner Sunken Panel */}
-          <div className="rounded-2xl dark:rounded-[24px] bg-[#e0e0e0] shadow-[inset_8px_8px_16px_rgba(163,177,198,0.55),_inset_-8px_-8px_16px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_4px_16px_rgba(0,0,0,0.95)] p-6 md:p-12 overflow-hidden relative flex flex-col items-center justify-start min-h-[400px] transition-all duration-300">
+          <div className="rounded-2xl dark:rounded-[24px] bg-[#e0e0e0] shadow-[inset_8px_8px_16px_rgba(163,177,198,0.55),_inset_-8px_-8px_16px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_4px_16px_rgba(0,0,0,0.95)] p-4 sm:p-8 md:p-12 overflow-hidden relative flex flex-col items-center justify-start min-h-[350px] sm:min-h-[400px] transition-all duration-300">
             
             {/* Background Custom Grid lines */}
-            <div className="absolute inset-0 opacity-40 dark:opacity-100 bg-[linear-gradient(to_right,#bebebe_1px,transparent_1px),linear-gradient(to_bottom,#bebebe_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#141414_1px,transparent_1px),linear-gradient(to_bottom,#141414_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none transition-all duration-300" />
+            <div className="absolute inset-0 opacity-40 dark:opacity-100 bg-[linear-gradient(to_right,#bebebe_1px,transparent_1px),linear-gradient(to_bottom,#bebebe_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#141414_1px,transparent_1px),linear-gradient(to_bottom,#141414_1px,transparent_1px)] bg-[size:2rem_2rem] sm:bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)] sm:[mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none transition-all duration-300" />
 
-            <div className="relative z-10 flex flex-col items-center text-center max-w-5xl w-full gap-8">
+            <div className="relative z-10 flex flex-col items-center text-center max-w-5xl w-full gap-6 sm:gap-8">
               
               {/* 1. Live Satellite Dispatch Node */}
               <div className="w-full flex items-center px-1 md:px-2 py-1.5 md:py-2 rounded-full bg-[#e0e0e0] shadow-[inset_4px_4px_8px_rgba(163,177,198,0.55),_inset_-4px_-4px_8px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_2px_8px_rgba(0,0,0,0.95)] overflow-hidden transition-all duration-300">
                 <div className="flex items-center gap-2 md:gap-3 px-3 md:px-4 border-r border-zinc-300 dark:border-zinc-800 shrink-0 z-10 bg-[#e0e0e0] dark:bg-[#030303]">
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)] animate-pulse" />
-                  <span className="text-[9px] md:text-[10px] font-bold text-zinc-600 dark:text-zinc-400 uppercase tracking-widest whitespace-nowrap">Live Satellite Dispatch Feed</span>
+                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)] animate-pulse" />
+                  <span className="text-[8px] sm:text-[9px] md:text-[10px] font-bold text-zinc-600 dark:text-zinc-400 uppercase tracking-widest whitespace-nowrap">Live Satellite Dispatch Feed</span>
                 </div>
                 <div className="flex-1 overflow-hidden relative flex items-center h-4 ml-2 md:ml-4 mask-gradient">
-                  <div className="whitespace-nowrap animate-marquee text-[10px] font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
+                  <div className="whitespace-nowrap animate-marquee text-[8px] sm:text-[10px] font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
                     LOG 7382: ORBITAL NODE ALPHA SYNC COMPLETE /// LOG 7383: INCOMING TRANSMISSION FROM SECTOR 4 /// LOG 7384: QUANTUM UPLINK STABLE AT 99.8% /// LOG 7385: DETECTING MINOR FLUCTUATION IN CORE TEMP /// LOG 7386: OVERRIDE PROTOCOL STANDBY ///
                   </div>
                 </div>
@@ -237,21 +237,21 @@ export default function Dashboard() {
               </div>
 
               {/* Curved Gradient Tactile Buttons */}
-              <div className="mt-8 flex gap-6">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
                 <button 
                   onClick={() => addLog("CORE INITIALIZATION SEQUENCE STARTED...")}
-                  className="px-8 py-3.5 rounded-full text-sm font-bold uppercase tracking-widest transition-all duration-200 flex items-center gap-2 bg-gradient-to-b from-white to-[#dcdfe4]/50 border-t border-white/60 shadow-[2px_2px_5px_#bebebe,_-2px_-2px_5px_#ffffff] active:shadow-[inset_2px_2px_4px_#bebebe,_inset_-2px_-2px_4px_#ffffff] dark:bg-zinc-50 dark:bg-none dark:hover:bg-zinc-200 dark:border-none dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] dark:active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)] text-cyan-600 dark:text-zinc-900 hover:text-cyan-600 dark:hover:text-zinc-700">
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-widest transition-all duration-200 flex items-center justify-center gap-2 bg-gradient-to-b from-white to-[#dcdfe4]/50 border-t border-white/60 shadow-[2px_2px_5px_#bebebe,_-2px_-2px_5px_#ffffff] active:shadow-[inset_2px_2px_4px_#bebebe,_inset_-2px_-2px_4px_#ffffff] dark:bg-zinc-50 dark:bg-none dark:hover:bg-zinc-200 dark:border-none dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] dark:active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)] text-cyan-600 dark:text-zinc-900 hover:text-cyan-600 dark:hover:text-zinc-700">
                   <Zap className="w-4 h-4" /> Initialize Core
                 </button>
                 <button 
                   onClick={() => addLog("ACCESSING SECURE LOGS ARCHIVE...")}
-                  className="px-8 py-3.5 rounded-full text-sm font-bold uppercase tracking-widest transition-all duration-200 flex items-center gap-2 bg-gradient-to-b from-white to-[#dcdfe4]/50 border-t border-white/60 shadow-[2px_2px_5px_#bebebe,_-2px_-2px_5px_#ffffff] active:shadow-[inset_2px_2px_4px_#bebebe,_inset_-2px_-2px_4px_#ffffff] dark:bg-zinc-50 dark:bg-none dark:hover:bg-zinc-200 dark:border-none dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] dark:active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)] text-zinc-600 dark:text-zinc-900 hover:text-cyan-600 dark:hover:text-zinc-700">
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-widest transition-all duration-200 flex items-center justify-center gap-2 bg-gradient-to-b from-white to-[#dcdfe4]/50 border-t border-white/60 shadow-[2px_2px_5px_#bebebe,_-2px_-2px_5px_#ffffff] active:shadow-[inset_2px_2px_4px_#bebebe,_inset_-2px_-2px_4px_#ffffff] dark:bg-zinc-50 dark:bg-none dark:hover:bg-zinc-200 dark:border-none dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] dark:active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)] text-zinc-600 dark:text-zinc-900 hover:text-cyan-600 dark:hover:text-zinc-700">
                   <Terminal className="w-4 h-4" /> Access Logs
                 </button>
               </div>
 
               {/* 4. Interactive CLI Terminal Console Box */}
-              <div className="w-full mt-6 rounded-[24px] dark:rounded-[16px] bg-[#e0e0e0] shadow-[inset_8px_8px_16px_rgba(163,177,198,0.55),_inset_-8px_-8px_16px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_4px_16px_rgba(0,0,0,0.95)] p-5 md:p-6 flex flex-col transition-all duration-300 h-56 relative text-left">
+              <div className="w-full mt-6 rounded-[24px] dark:rounded-[16px] bg-[#e0e0e0] shadow-[inset_8px_8px_16px_rgba(163,177,198,0.55),_inset_-8px_-8px_16px_#ffffff] dark:bg-[#030303] dark:border dark:border-zinc-900 dark:shadow-[inset_0_4px_16px_rgba(0,0,0,0.95)] p-4 sm:p-5 md:p-6 flex flex-col transition-all duration-300 h-64 sm:h-56 relative text-left">
                 {/* Terminal Header */}
                 <div className="flex items-center justify-between mb-4 pb-4 border-b border-zinc-300 dark:border-zinc-800">
                   <div className="flex items-center gap-2">
