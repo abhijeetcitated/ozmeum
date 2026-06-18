@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { Zap } from "lucide-react";
+import { HomeAreaChart } from "@/components/home-area-chart";
+import { ProjectTasksTable } from "@/components/project-tasks-table";
 
 export default function Home() {
   return (
@@ -170,6 +172,21 @@ export default function Home() {
             </div>
           </div>
         ))}
+      </section>
+
+      {/* Area Chart Section */}
+      <section className="w-full">
+        <HomeAreaChart />
+      </section>
+
+      {/* Project Tasks Table Section */}
+      <section className="w-full pb-8 sm:pb-12">
+        <div className="flex flex-col gap-4 sm:gap-6">
+          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-zinc-700 dark:text-zinc-100 uppercase tracking-wider sm:tracking-widest flex items-center gap-2 sm:gap-3 px-2 sm:px-0">
+            Project Deliverables
+          </h2>
+          <ProjectTasksTable />
+        </div>
       </section>
     </div>
   );
